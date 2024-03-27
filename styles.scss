@@ -1,0 +1,80 @@
+:root {
+
+	--wmx-select-text-align: left;
+
+	--wmx-select-width: 237px;
+	--wmx-select-color: #212324;
+	--wmx-select-border-color: #4f3f2f;
+	--wmx-select-border-width: 1px;
+	--wmx-select-border-padding: 10px;
+
+	--wmx-select-dropdown-border-color: var(--wmx-select-border-color);
+	--wmx-select-dropdown-bg-color: #d2d3d4;
+
+	--wmx-select-item-padding: var(--wmx-select-border-padding);
+	--wmx-select-item-color: var(--wmx-select-color);
+	--wmx-select-item-hover-color: #d4d6d9;
+	--wmx-select-item-hover-background: #222222;
+	--wmx-select-item-selected-color: #33d2d2;
+}
+
+.wmx-select {
+	position: relative;
+	min-width: var(--wmx-select-width);
+
+	select {
+		display: none;
+	}
+
+	.wmx-button {
+		text-align: var(--wmx-select-text-align);
+
+		width: 100%;
+		appearance: none;
+		display: block;
+		cursor: pointer;
+		border-style: solid;
+		border-color: var(--wmx-select-border-color);
+		border-width: var(--wmx-select-border-width);
+		padding: var(--wmx-select-border-padding);
+
+		color: var(--wmx-select-color);
+	}
+
+	.wmx-dropdown {
+		position: absolute;
+		left: 0;
+		opacity: 0;
+		pointer-events: none;
+		width: 100%;
+	}
+
+	&.open .wmx-dropdown {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+.wmx-dropdown {
+	border-style: solid;
+	border-color: var(--wmx-select-dropdown-border-color);
+	border-width: 1px;
+	background-color: var(--wmx-select-dropdown-bg-color);
+
+	li {
+		text-align: var(--wmx-select-text-align);
+		cursor: pointer;
+		padding: var(--wmx-select-item-padding);
+
+		color: var(--wmx-select-item-color);
+
+		&:hover {
+			color: var(--wmx-select-item-hover-color);
+			background-color: var(--wmx-select-item-hover-background);
+		}
+		&.wmx-selected,
+		&[selected] {
+			color: var(--wmx-select-item-selected-color);
+		}
+	}
+}
