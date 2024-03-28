@@ -1,11 +1,12 @@
 {
   "name": "wmx-select",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "A simple JavaScript replacement for HTML selects",
   "main": "index.js",
   "scripts": {
     "minify": "uglifyjs index.js --compress --mangle --source-map --output index.min.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "nvm publish"
   },
   "keywords": [
     "javascript",
