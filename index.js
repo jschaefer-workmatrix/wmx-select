@@ -11,7 +11,7 @@ const defaultOptions = {
 class WmxSelect {
 	constructor(options) {
 		// Enrich default options
-		this.options = {...options, ...defaultOptions}
+		this.options = {...defaultOptions, ...options}
 
 		if(!this.options.element){
 			this.element = document.querySelector('select')
